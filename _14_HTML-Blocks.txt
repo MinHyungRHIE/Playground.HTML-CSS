@@ -1,0 +1,26 @@
+Every HTML element has a default display value depending on what type of element it is.
+The two display values are: block and inline.
+
+Block-level Elements
+    A block-level element always starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+        <body>
+            <div style="border: 1px solid black">Hello World</div>
+            <p>The DIV element is a block element, and will always start on a new line and take up the full width available (stretches out to the left and right as far as it can).</p>
+        </body>
+
+    The <div> Element
+        The <div> element is often used as a container for other HTML elements.
+        The <div> element has no required attributes, but style, class and id are common.
+        When used together with CSS, the <div> element can be used to style blocks of content:
+
+Inline Elements
+    An inline element does not start on a new line and only takes up as much width as necessary.
+        <body>
+            <p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
+            <p>The SPAN element is an inline element, and will not start on a new line and only takes up as much width as necessary.</p>
+        </body>
+
+    The <span> Element
+        The <span> element is often used as a container for some text.
+        The <span> element has no required attributes, but style, class and id are common.
+        When used together with CSS, the <span> element can be used to style parts of the text:

@@ -1,0 +1,51 @@
+CSS stands for Cascading Style Sheets.
+
+CSS can be added to HTML elements in 3 ways:
+
+    Inline - by using the style attribute in HTML elements
+            <h1 style="color:blue;">This is a Blue Heading</h1>
+
+
+    Internal - by using a <style> element in the <head> section
+            <head>
+                <style>
+                    body {background-color: powderblue;}
+                    h1   {color: blue;}
+                    p    {color: red;}
+                </style>
+            </head>
+
+
+    External - by using an external CSS file
+            <head>
+                <link rel="stylesheet" href="styles.css">
+            </head>
+The most common way to add CSS, is to keep the styles in separate CSS files
+
+CSS Fonts
+    The CSS color property defines the text color to be used.
+    The CSS font-family property defines the font to be used.
+    The CSS font-size property defines the text size to be used.
+
+CSS Border
+    The CSS border property defines a border around an HTML element:
+
+CSS Padding
+    The CSS padding property defines a padding (space) between the text and the border:
+    space inside the border
+
+CSS Margin
+    The CSS margin property defines a margin (space) outside the border:
+    space outside the border
+
+The id Attribute :  for one special element
+    <p id="p01">I am different</p>
+    #p01 {
+        color: blue;
+    }
+
+The class Attribute :  for special types of elements
+    <p class="error">I am different</p>
+    p.error {
+        color: red;
+    }

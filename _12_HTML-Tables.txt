@@ -1,0 +1,73 @@
+HTML Table - Adding a Border
+    table, th, td {
+        border: 1px solid black;
+    }
+
+HTML Table - Collapsed Borders
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+HTML Table - Adding Cell Padding
+    th, td {
+        padding: 15px;
+    }
+
+HTML Table - Left-align Headings
+    th {
+        text-align: left; <!-- center, right -->
+    }
+
+HTML Table - Adding Border Spacing
+    table {
+        border-spacing: 5px;
+    }
+
+HTML Table - Cells that Span Many Columns
+[To make a cell span more than one column, use the colspan attribute:]
+    <table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Telephone</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>55577854</td>
+        <td>55577855</td>
+    </tr>
+    </table>
+
+HTML Table - Cells that Span Many Rows
+[To make a cell span more than one row, use the rowspan attribute:]
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+
+HTML Table - Adding a Caption
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+
