@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Each input field must have a name attribute to be submitted.
+If the name attribute is omitted, the data of that input field will not be sent at all. -->
+    <form action="/action_page.php" target="_blank" method="get">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" />
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+<!-- When to Use GET?
+The default HTTP method when submitting form data is GET.
+However, when GET is used, the form data will be visible in the page's address field:
+
+Appends form-data into the URL in name/value pairs
+The length of a URL is limited (2048 characters)
+Never use GET to send sensitive data! (will be visible in the URL)
+Useful for form submissions where a user wants to bookmark the result
+GET is better for non-secure data, like query strings in Google
+-->
+
+<!--  When to Use POST?
+Always use POST if the form data contains sensitive or personal information. 
+The POST method does not display the form data in the page address field.
+
+POST has no size limitations, and can be used to send large amounts of data.
+Form submissions with POST cannot be bookmarked
+-->
