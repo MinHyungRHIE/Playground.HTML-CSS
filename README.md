@@ -1,6 +1,6 @@
 # 깃 마크다운 사용법
 
-## 첫번째
+## 헤드는 h1~h6까지 있고 #의 개수로 구분하면 됨
 
 ### 순서매기기
 1.
@@ -66,4 +66,17 @@ This *paragraph* **contains** a ~~lot~~ of **`lines`** in the source code, but t
 마크다운에 그냥 \<picture> 이렇게 쓰면 태그로 인식해서 보이질 않는다. 그래서 아래처럼 써야한다.
 ```
 \<table>
+```
+
+### 표 만드는법
+|Value|Description|
+|:---|:---|
+|disc|	Sets the list item marker to a bullet (default)|
+|circle|	Sets the list item marker to a circle|
+|square|	Sets the list item marker to a square|
+|none|	The list items will not be marked|
+```
+|:---| : 왼쪽 정렬 (default)
+|:---:| : 가운데 정렬
+|---:| : 오른쪽 정렬
 ```
