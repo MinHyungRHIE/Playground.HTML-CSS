@@ -56,3 +56,9 @@ public static void main(String[] args){
 ### 강조
 
 This *paragraph* **contains** a ~~lot~~ of **`lines`** in the source code, but the browser ignores it.
+
+### 태크 쓰는법
+마크다운에 그냥 \<picture> 이렇게 쓰면 태그로 인식해서 보이질 않는다. 그래서 아래처럼 써야한다.
+```
+\<table>
+```
