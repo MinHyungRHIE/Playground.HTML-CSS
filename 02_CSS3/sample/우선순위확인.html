@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="우선순위확인.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+        .Internal-P {
+            color: chartreuse;
+        }
+
+        .Internal-Span {
+            color: chartreuse;
+        }
+
+        * {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        p {
+            color: cyan;
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="우선순위확인.css"> -->
+</head>
+
+<body>
+    <p style="color:red;">
+        이곳은 p가 적용된 Inline CSS 테스트 부분
+        <span style="color:blue;">
+            ""이곳은 span이 적용된 부분입니다.""
+        </span>
+        그리고 이렇게 p 태그가 닫힙니다.
+    </p>
+    <p class="Internal-P">
+        이곳은 p가 적용된 Internal CSS 테스트 부분
+        <span class="Internal-Span" style="color:red;">
+            ""이곳은 span이 적용된 부분입니다.""
+        </span>
+        그리고 이렇게 p 태그가 닫힙니다.
+    </p>
+    <p class="External-P">
+        이곳은 p가 적용된 External CSS 테스트 부분
+        <span class="External-Span">
+            ""이곳은 span이 적용된 부분입니다.""
+        </span>
+        그리고 이렇게 p 태그가 닫힙니다.
+    </p>
+
+</body>
+
+</html>

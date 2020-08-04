@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+p {
+    color: rgb(7, 125, 161);
+}
+
+.External-P {
+    font-family: 'Black Han Sans', sans-serif;
+    color: rgb(105, 164, 182);
+}
