@@ -2169,6 +2169,8 @@ h2::before {
 
 ```
 
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 # Practice
 
@@ -2339,3 +2341,5 @@ body {
 </html>
 
 ```
+
+[RESPONSIVEDESIGN.IS](https://responsivedesign.is/patterns/)
