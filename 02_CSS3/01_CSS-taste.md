@@ -564,6 +564,14 @@ div {
 }
 ```
 
+```css
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
 ### Inherit Value
 
 ```css
@@ -576,6 +584,8 @@ p.ex1 {
   margin-left: inherit;
 }
 ```
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 8. Padding
 
@@ -646,6 +656,9 @@ div {
 }
 ```
 
+<br><br><br><br><br>
+<br><br><br><br><br>
+
 ## 9. Height and Width
 
 ### Values
@@ -676,6 +689,43 @@ div {
   background-color: powderblue;
 }
 ```
+
+```css
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.ex1 {
+  width: 500px;
+  margin: auto; /* 가운데 정렬 */
+  border: 3px solid #73AD21;
+}
+
+div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Max-width</h2>
+
+<div class="ex1">This div element has width: 500px;</div>
+<br>
+
+<div class="ex2">This div element has max-width: 500px;</div>
+
+<p><strong>Tip:</strong> Drag the browser window to smaller than 500px wide, to see the difference between 
+the two divs!</p>
+
+</body>
+</html>
+
+```
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 10. Outline
 
@@ -740,6 +790,9 @@ p.ex4 {outline: thick ridge pink;}
 ### `outline-offset`
 
 This property adds space between an outline and the edge/border of an element
+
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 11.Text
 
@@ -935,6 +988,9 @@ h1 {
 }
 ```
 
+<br><br><br><br><br>
+<br><br><br><br><br>
+
 ## 12. Font
 
  - If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".
@@ -1053,6 +1109,8 @@ p.b {
   font: italic small-caps bold 12px/30px Georgia, serif;
 }
 ```
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 13. Icon
 
@@ -1073,6 +1131,9 @@ p.b {
 </body>
 </html>
 ```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 14. Link
 
@@ -1119,6 +1180,8 @@ a:active {
   text-decoration: underline;
 }
 ```
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 15. list
 
@@ -1203,6 +1266,8 @@ ul {
   list-style: square inside url("sqpurple.gif");
 }
 ```
+<br><br><br><br><br>
+<br><br><br><br><br>
 
 ## 16. Table
 
@@ -1408,4 +1473,869 @@ small to display the full content. Resize the browser window to see the effect:<
 
 </body>
 </html>
+```
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 17. Display
+
+```css
+li {
+  display: inline;
+}
+span {
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+span {
+  display: none;
+}
+```
+
+```css
+h1.hidden {
+  visibility: hidden;
+}
+h1.hidden {
+  visibility: visible;
+}
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 18. Postion
+
+ - static : default
+ - relative : 왼쪽 indent? 
+ - fixed : 스크롤 내려도 보임
+ - absolute : 
+ - sticky : 스크롤 내려도 보임, 확장 꽉참
+
+```css
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 19. Overflow
+
+ - visible - Default. The overflow is not clipped. The content renders outside the element's box
+ - hidden - The overflow is clipped, and the rest of the content will be invisible
+ - scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+ - auto - Similar to scroll, but it adds scrollbars only when necessary
+
+```css
+div {
+  overflow: scroll;
+}
+```
+
+```css
+div {
+  background-color: #eee;
+  width: 200px;
+  height: 50px;
+  border: 1px dotted black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 20. Float
+
+ - left
+ - right
+ - none
+ - inherit
+
+```css
+img {
+  float: right;
+}
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+### Clear
+
+ - none - Allows floating elements on both sides. This is default
+ - left - No floating elements allowed on the left side
+ - right- No floating elements allowed on the right side
+ - both - No floating elements allowed on either the left or the right side
+ - inherit - The element inherits the clear value of its parent
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.img2 {
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<h2>Clearfix</h2>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div>
+  <img class="img1" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+<p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+  <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Grid of Boxes</h2>
+<p>Float boxes side by side:</p>
+
+<div class="clearfix">
+  <div class="box" style="background-color:#bbb">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box" style="background-color:#ccc">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box" style="background-color:#ddd">
+  <p>Some text inside the box.</p>
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that add the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+</body>
+</html>
+
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 21. Combinator
+
+### Child Selector (>)
+
+```css
+div p {
+  background-color: yellow;
+}
+```
+div 아래 p가 있다면 모두 적용
+
+<br><br>
+
+```css
+div > p {
+  background-color: yellow;
+}
+```
+직접적인 자식만 적용됨
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+### Adjacent Sibling Selector (+)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div + p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>Adjacent Sibling Selector</h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. After a div.</p>
+<p>Paragraph 4. After a div.</p>
+
+<div>
+  <p>Paragraph 5 in the div.</p>
+  <p>Paragraph 6 in the div.</p>
+</div>
+
+<p>Paragraph 7. After a div.</p>
+<p>Paragraph 8. After a div.</p>
+
+</body>
+</html>
+```
+
+### General Sibling Selector (~)
+The general sibling selector selects all elements that are siblings of a specified element.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div ~ p {
+  background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>General Sibling Selector</h2>
+<p>The general sibling selector (~) selects all elements that are siblings of a specified element.</p>
+
+<p>Paragraph 1.</p>
+
+<div>
+  <p>Paragraph 2.</p>
+</div>
+
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
+
+</body>
+</html>
+```
+
+## 22. Pseudo Classes
+
+### [link](https://www.w3schools.com/css/css_pseudo_classes.asp)
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 23. Vertical NavBar
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <h2>Fixed Full-height Side Nav</h2>
+  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+  <p>Some text..</p>
+</div>
+
+</body>
+</html>
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 24. Horizontal Navbar
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
+  <h1>Fixed Top Navigation Bar</h1>
+  <h2>Scroll this page to see the effect</h2>
+  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+</div>
+
+</body>
+</html>
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 25. Attribute Selectors
+
+### `CSS [attribute~="value"] Selector`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[title~=flower] {
+  border: 5px solid yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute~="value"] Selector</h2>
+<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+
+<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+<img src="img_flwr.gif" title="flower" width="224" height="162">
+<img src="img_tree.gif" title="tree" width="200" height="358">
+
+</body>
+</html>
+```
+
+### `CSS [attribute|="value"] Selector`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[class|=top] {
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute|="value"] Selector</h2>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Hello world!</p>
+<p class="topcontent">Are you learning CSS?</p>
+
+</body>
+</html>
+
+```
+
+### CSS [attribute^="value"] Selector
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+[class^="top"] {
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute^="value"] Selector</h2>
+
+<h1 class="top-header">Welcome</h1>
+<p class="top-text">Hello world!</p>
+<p class="topcontent">Are you learning CSS?</p>
+
+</body>
+</html>
+
+```
+
+### CSS [attribute$="value"] Selector
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class$="test"] {
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute$="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+
+</body>
+</html>
+
+```
+
+### CSS [attribute*="value"] Selector
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+[class*="te"] {
+  background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS [attribute*="value"] Selector</h2>
+
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest">This is some text in a paragraph.</p>
+
+</body>
+</html>
+
+```
+
+### Styling Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type=button] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h2>Styling Forms</h2>
+
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="Peter" size="20">
+  Lastname:<input type="text" name="Name" value="Griffin" size="20">
+  <input type="button" value="Example Button">
+</form>
+
+</body>
+</html>
+
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+## 26. Counters
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+
+</body>
+</html>
+
+```
+
+
+# Practice
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Website</h1>
+  <p>Resize the browser window to see the effect.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
+
 ```
