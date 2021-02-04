@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #4f5c5fef;
+            padding: 10px;
+        }
+
+        .header {
+            background-color: aquamarine;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .topnav {
+            background-color: cadetblue;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            float: left;
+            padding: 20px;
+            background-color: darkgreen;
+            text-decoration: none;
+            display: block;
+            color: darkgray;
+        }
+
+        .topnav a:hover {
+            background-color: brown;
+            color: white;
+        }
+
+        .row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .left-column {
+            float: left;
+            width: 70%;
+        }
+
+        .right-column {
+            float: left;
+            width: 30%;
+            padding-left: 15px;
+        }
+
+        .card {
+            background-color: rgb(221, 132, 132);
+            padding: 20px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .fakeimg {
+            background-color: slategray;
+            width: 100%;
+        }
+
+        .horizontal-lising {
+            float: left;
+            width: 32%;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .vertical-listing {
+            margin-top: 15px;
+        }
+
+        .footer {
+            background-color: rgb(96, 187, 99);
+            text-align: center;
+            margin-top: 20px;
+            padding: 50px;
+        }
+
+
+
+        @media screen and (max-width: 800px) {
+
+            .left-column,
+            .right-column {
+                width: 100%;
+                padding: 0px;
+            }
+
+            .fakeimg {
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .topnav a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome To Rhie-Coder's Blog</h1>
+        <p>This is my practice page</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#">OVERVIEW</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#" style="float:right">PROFILE</a>
+    </div>
+
+    <div class='row'>
+        <div class='left-column'>
+            <div class='card'>
+                <h2>My Story</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class='fakeimg' style="height: 200px;">Image</div>
+            </div>
+            <div class='card'>
+                <h2>Histroy</h2>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical
+                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
+                    a Lorem Ipsum passage</p>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+            </div>
+
+            <div class='card'>
+                <h2>Albums</h2>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+                <div class='fakeimg horizontal-lising' style="height: 100px;">Image</div>
+            </div>
+        </div>
+
+        <div class='right-column'>
+            <div class='card'>
+                <h2>About Me</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters,</p>
+            </div>
+            <div class='card'>
+                <h2>Most views</h2>
+                <div class='fakeimg vertical-listing' style="height: 50px;">Image</div>
+                <div class='fakeimg vertical-listing' style="height: 50px;">Image</div>
+                <div class='fakeimg vertical-listing' style="height: 50px;">Image</div>
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        FOOTER
+    </div>
+
+</body>
+
+</html>
