@@ -67,21 +67,23 @@
             background-color:bisque;
         }
 
-        .searching p{
-            display:inline-block;
-
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+        .searching span{
+            text-shadow: 2px 2px 5px red;
         }
 
         .searching input{
             padding:10px;
+            width: 200px;
             border-style: solid;
             border-color:#4CAF50;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+            transition: width 0.5s;
         }
 
         .searching input:focus{
+            display:inline;
             background-color: aquamarine;
+            width:90%;
         }
 
         .searching button{
@@ -103,6 +105,8 @@
         #content h6 {
             background-color: yellow;
         }
+        
+
     </style>
 </head>
 <body>
@@ -157,7 +161,10 @@
     <div id="content">
         <h6>isRed? isYellow?</h6>
     </div>
-    
+
+    <br>
+
+  
     
 
 </body>
