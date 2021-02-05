@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+        .intro {
+            color: midnightblue;
+            text-align: center;
+            background-color: lightblue;
+            text-decoration: underline;
+            text-transform: uppercase;
+            line-height: 2.5;
+            text-shadow: 3px 3px CadetBlue;
+            font-family: "Brush Script MT";
+
+
+            /* width: 500px;
+            height: 100px; */
+
+            padding: 20px;
+
+            border-style: solid;
+            border-width: 5px 5px 5px 15px;
+            border-radius: 50px;
+
+            margin:100px;
+            /* margin:auto; 양옆 margin의 길이를 같게 하여 center에 자동으로 맞춰줌*/
+
+            outline-style: solid;
+            outline-color: black;
+            outline-width: 20px;
+            outline-offset: 15px;
+        }
+
+        .first-table table, .first-table tr, .first-table th,.first-table td{
+            border: 3px solid black;
+            
+        }
+
+        .first-table{
+            width: 50%;
+            margin:auto
+        }
+
+        .first-table th{
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            text-indent: 10px;
+        }
+
+        .first-table tr td{
+            padding: 5px;
+            text-align: center;
+        }
+
+        .first-table tr:nth-child(even){
+            background-color: #f2f2f2e0;
+        }
+        
+        .first-table tr:hover{
+            background-color:bisque;
+        }
+
+        .searching p{
+            display:inline-block;
+
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+        }
+
+        .searching input{
+            padding:10px;
+            border-style: solid;
+            border-color:#4CAF50;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+        }
+
+        .searching input:focus{
+            background-color: aquamarine;
+        }
+
+        .searching button{
+            background-color: #f44336;;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            text-decoration: none;
+            border:none;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
+            cursor: pointer;
+        }
+
+        .searching button:hover{
+            color:white;
+            background-color: rgb(45, 96, 191);
+        }
+
+        #content h6 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>Hello World<br>Nice to Meet You</h1>
+    </div>
+
+    <table class="first-table">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+          </tr>
+    </table>
+
+    <div class='searching' >
+        <span>검색</span>
+        <input type='text' placeholder="검색어를 입력하세요"/>
+        <button>Go</button>
+    </div>
+
+    <div id="content">
+        <h6>isRed? isYellow?</h6>
+    </div>
+    
+    
+
+</body>
+</html>

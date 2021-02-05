@@ -2172,6 +2172,37 @@ h2::before {
 <br><br><br><br><br>
 <br><br><br><br><br>
 
+## 27. 우선순위 Rules
+
+### score
+
+ - `style` attribute : 1000 point
+ - `id` : 100 point
+ - class, pseudo-class, attribute : 10 point (class > attribute)
+ - element, pseudo-element : 1 point
+
+### order
+
+ - red
+
+```css
+h1 {background-color: yellow;}
+h1 {background-color: red;}
+```
+
+### ID selectors > attribute selectors
+
+ - green
+
+```css
+div#a {background-color: green;}
+#a {background-color: yellow;}
+div[id=a] {background-color: blue;}
+```
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
 # Practice
 
 ```html
