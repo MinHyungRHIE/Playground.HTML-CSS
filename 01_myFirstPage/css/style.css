@@ -1,0 +1,19 @@
+* {
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration:none;
+    border-collapse:collapse;
+    margin:0px;
+    padding:0px;
+    color:#000;
+}
+
+.test {
+    color: red;
+}
+
+.intro_bg{
+    background-image:url("../image/apple.jpg");
+    width: 100%;
+    height: 718px;;
+}
